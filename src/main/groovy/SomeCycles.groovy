@@ -10,5 +10,6 @@ class SomeCycles implements Plugin<Project> {
         target.tasks.create(name:'SomeCycles',dependsOn: ['compileJava']) << {
             println "Dodge this!"
         }
+        target.extensions.create('SomeCycles', SomeCyclesExtension.class)
     }
 }
